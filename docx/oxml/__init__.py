@@ -113,6 +113,7 @@ register_element_cls('wp:docPr',      CT_NonVisualDrawingProps)
 register_element_cls('wp:extent',     CT_PositiveSize2D)
 register_element_cls('w:drawing',     CT_Drawing)
 register_element_cls('wp:inline',     CT_Inline)
+register_element_cls('wp:anchor',     CT_Inline)
 
 from .styles import CT_LatentStyles, CT_LsdException, CT_Style, CT_Styles
 register_element_cls('w:basedOn',        CT_String)

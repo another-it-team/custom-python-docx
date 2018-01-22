@@ -47,13 +47,14 @@ class CT_GraphicalObjectData(BaseOxmlElement):
     """
     pic = ZeroOrOne('pic:pic')
     uri = RequiredAttribute('uri', XsdToken)
-	
-	
+
+
 class CT_Drawing(BaseOxmlElement):
-	"""
-	``<w:drawing>`` element
-	"""
-	inline = OneAndOnlyOne('wp:inline')
+    """
+    ``<w:drawing>`` element
+    """
+    inline = OneAndOnlyOne('wp:inline')
+    anchor = OneAndOnlyOne('wp:anchor')
 
 
 class CT_Inline(BaseOxmlElement):

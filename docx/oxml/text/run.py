@@ -92,10 +92,16 @@ class CT_R(BaseOxmlElement):
             if child.tag == qn('w:t'):
                 t_text = child.text
                 text += t_text if t_text is not None else ''
+            elif child.tag == qn('w:drawing'):
+                try:
+                    text += str(child.inline.graphic.graphicData.pic.blipFill.blip.embed)
+                except:
+                    text += ''
             elif child.tag == qn('w:tab'):
                 text += '\t'
             elif child.tag in (qn('w:br'), qn('w:cr')):
                 text += '\n'
+
         return text
 
     @text.setter
@@ -119,6 +125,7 @@ class _RunContentAppender(object):
     appended. Likewise a newline or carriage return character ('\n', '\r')
     causes a ``<w:cr>`` element to be appended.
     """
+
     def __init__(self, r):
         self._r = r
         self._bfr = []
