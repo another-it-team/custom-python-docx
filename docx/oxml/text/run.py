@@ -28,6 +28,7 @@ class CT_R(BaseOxmlElement):
     br = ZeroOrMore('w:br')
     cr = ZeroOrMore('w:cr')
     tab = ZeroOrMore('w:tab')
+    object = ZeroOrMore('w:object')
     drawing = ZeroOrMore('w:drawing')
 
     def _insert_rPr(self, rPr):
@@ -92,11 +93,6 @@ class CT_R(BaseOxmlElement):
             if child.tag == qn('w:t'):
                 t_text = child.text
                 text += t_text if t_text is not None else ''
-            elif child.tag == qn('w:drawing'):
-                try:
-                    text += str(child.inline.graphic.graphicData.pic.blipFill.blip.embed)
-                except:
-                    text += ''
             elif child.tag == qn('w:tab'):
                 text += '\t'
             elif child.tag in (qn('w:br'), qn('w:cr')):
