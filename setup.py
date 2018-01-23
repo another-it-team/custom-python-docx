@@ -25,13 +25,13 @@ version = re.search(
 ).group(1)
 
 
-NAME = 'python-docx'
+NAME = 'custom-python-docx'
 VERSION = version
 DESCRIPTION = 'Create and update Microsoft Word .docx files.'
 KEYWORDS = 'docx office openxml word'
-AUTHOR = 'Steve Canny'
-AUTHOR_EMAIL = 'python-docx@googlegroups.com'
-URL = 'https://github.com/python-openxml/python-docx'
+AUTHOR = 'Dinh Van Kiet'
+AUTHOR_EMAIL = 'dinhvankiet124@gmail.com'
+URL = 'https://github.com/bgo-education/custom-python-docx'
 LICENSE = text_of('LICENSE')
 PACKAGES = find_packages(exclude=['tests', 'tests.*'])
 PACKAGE_DATA = {'docx': ['templates/*']}

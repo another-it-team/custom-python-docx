@@ -1,10 +1,3 @@
-.. image:: https://travis-ci.org/python-openxml/python-docx.svg?branch=master
-   :target: https://travis-ci.org/python-openxml/python-docx
+# Custom-python-docx
 
-*custom-python-docx* is a Python library for creating and updating Microsoft Word that modified
-(.docx) files.
-
-More information is available in the `python-docx documentation`_.
-
-.. _`python-docx documentation`:
-   https://python-docx.readthedocs.org/en/latest/
+Dựa trên project [python-docx](https://github.com/python-openxml/python-docx) được tùy biến lại để phù hợp với mục đích extract ảnh từ file word
