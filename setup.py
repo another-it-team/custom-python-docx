@@ -32,7 +32,7 @@ KEYWORDS = 'docx office word'
 AUTHOR = 'kietdv'
 AUTHOR_EMAIL = 'dinhvankiet124@gmail.com'
 URL = 'https://github.com/another-it-team/custom-python-docx'
-LICENSE = text_of('LICENSE')
+LICENSE = text_of('./LICENSE')
 PACKAGES = find_packages(exclude=['tests', 'tests.*'])
 PACKAGE_DATA = {'docx': ['templates/*']}
 
